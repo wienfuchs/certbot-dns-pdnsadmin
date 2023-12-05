@@ -1,11 +1,3 @@
-[![Build Status](https://travis-ci.com/pan-net-security/certbot-dns-pdnsadmin.svg?branch=master)](https://travis-ci.com/pan-net-security/certbot-dns-pdnsadmin)
-[![Coverage Status](https://coveralls.io/repos/github/pan-net-security/certbot-dns-powerdns/badge.svg?branch=master)](https://coveralls.io/github/pan-net-security/certbot-dns-powerdns?branch=master)
-![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/github/pan-net-security/certbot-dns-powerdns.svg)
-![PyPI - Status](https://img.shields.io/pypi/status/certbot-dns-powerdns.svg)
-
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/certbot-dns-powerdns.svg)
-
-
 certbot-dns-powerdns
 ============
 
@@ -66,34 +58,20 @@ FAQ
 
 This follows the upstream nomenclature: `certbot-dns-<dns-provider>`.
 
-##### Why do I have to use `:` separator in the name? And why are the configuration file parameters so weird?
+##### Are you (WienFuchs) affiliated with Pan-Net?
 
-This is a limitation of the Certbot interface towards _third-party_ plugins.
+I am not affiliated in any way, I found this nice plugin beeing useful and simply decided to deveolp it a little further, as it did not work for me any longer.
 
-For details read the discussions:
+##### Will you (WienFuchs) ensure further updates if needed?
 
-- https://github.com/certbot/certbot/issues/6504#issuecomment-473462138
-- https://github.com/certbot/certbot/issues/6040
-- https://github.com/certbot/certbot/issues/4351
-- https://github.com/certbot/certbot/pull/6372
+As long as I personally use it (which is expected to be a long period), I will do my best to keep it aup to date and working with recent Python, PowerDNS (-Admin) and Certbot versions. Feel free to place any issues, if needed.
 
-Development
------------
-
-Create a virtualenv, install the plugin (`editable` mode),
-spawn the environment and run the test:
-
-```
-virtualenv -p python3 .venv
-. .venv/bin/activate
-pip install -e .
-docker-compose up -d
-./test/run_certonly.sh test/pdns-credentials.ini
-```
 
 License
 --------
 
 Copyright (c) 2019 [DT Pan-Net s.r.o](https://github.com/pan-net-security)
+
 Updates Copyright (c) 2023 [Wienfuchs](https://github.com/wienfuchs)
+
 Original release by [DT Pan-Net s.r.o](https://github.com/pan-net-security) was covered by {APACHE License 2.0](https://www.apache.org/licenses/LICENSE-2.0) as per source code

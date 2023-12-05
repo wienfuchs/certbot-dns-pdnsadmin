@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup
 from setuptools import find_packages
 
-version = "0.2.2"
+version = "0.2.2beta"
 
 with open('README.md') as f:
     long_description = f.read()

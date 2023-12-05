@@ -28,7 +28,7 @@ chmod -R 0755 $TEMP_DIR/var/log/letsencrypt \
 certbot \
         --dns-powerdns-credentials $1 \
         --dns-powerdns:dns-powerdns-propagation-seconds 20 \
-        --authenticator dns-powerdns:dns-powerdns \
+        --authenticator dns-powerdns \
         --logs-dir $TEMP_DIR/var/log/letsencrypt/ \
         --server https://localhost:14000/dir \
         --work-dir $TEMP_DIR/var/lib/letsencrypt \
