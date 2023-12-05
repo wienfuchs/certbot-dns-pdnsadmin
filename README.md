@@ -29,12 +29,11 @@ Verify:
 $ certbot plugins --text
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-* certbot-dns-powerdns:dns-powerdns
+* dns-powerdns
 Description: Obtain certificates using a DNS TXT record (if you are using
 PowerDNS for DNS.)
 Interfaces: IAuthenticator, IPlugin
 Entry point: dns-powerdns = certbot_dns_powerdns.dns_powerdns:Authenticator
-
 ...
 ...
 ```
@@ -45,8 +44,8 @@ Configuration
 The credentials file e.g. `~/pdns-credentials.ini` should look like this:
 
 ```
-certbot_dns_powerdns:dns_powerdns_api_url = https://api.mypowerdns.example.org
-certbot_dns_powerdns:dns_powerdns_api_key = AbCbASsd!@34
+dns_powerdns_api_url = https://api.your.powerdns-admin.example.org
+dns_powerdns_api_key = Your.Secret.PowerDNS-Admin.API.key
 ```
 
 Usage
