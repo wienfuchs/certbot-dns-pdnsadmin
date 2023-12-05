@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.com/pan-net-security/certbot-dns-powerdns.svg?branch=master)](https://travis-ci.com/pan-net-security/certbot-dns-powerdns)
-[![Coverage Status](https://coveralls.io/repos/github/pan-net-security/certbot-dns-powerdns/badge.svg?branch=master)](https://coveralls.io/github/pan-net-security/certbot-dns-powerdns?branch=master)
+[![Build Status](https://travis-ci.com/wienfuchs/certbot-dns-pdnsadmin.svg?branch=py3+pdns-admin)](https://travis-ci.com/wienfuchs/certbot-dns-pdnsadmin)
+[![Coverage Status](https://coveralls.io/repos/github/wienfuchs/certbot-dns-powerdns/badge.svg?branch=py3+pdns-admin)](https://coveralls.io/github/wienfuchs/certbot-dns-powerdns?branch=py3+pdns-admin)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/github/pan-net-security/certbot-dns-powerdns.svg)
 ![PyPI - Status](https://img.shields.io/pypi/status/certbot-dns-powerdns.svg)
 
@@ -55,8 +55,8 @@ Usage
 
 ```
 certbot ... \
-        --authenticator certbot-dns-powerdns:dns-powerdns  \
-        --certbot-dns-powerdns:dns-powerdns-credentials ~/pdns-credentials.ini \
+        --authenticator dns-powerdns  \
+        --dns-powerdns-credentials ~/pdns-credentials.ini \
         certonly
 ```
 
