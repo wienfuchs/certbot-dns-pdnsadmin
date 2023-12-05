@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.com/pan-net-security/certbot-dns-powerdns.svg?branch=master)](https://travis-ci.com/pan-net-security/certbot-dns-powerdns)
+[![Build Status](https://travis-ci.com/pan-net-security/certbot-dns-pdnsadmin.svg?branch=master)](https://travis-ci.com/pan-net-security/certbot-dns-pdnsadmin)
 [![Coverage Status](https://coveralls.io/repos/github/pan-net-security/certbot-dns-powerdns/badge.svg?branch=master)](https://coveralls.io/github/pan-net-security/certbot-dns-powerdns?branch=master)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=6cfb0c4728624ebff38afc0b1ef91700795ea9ef&metric=alert_status)](https://sonarcloud.io/dashboard?id=6cfb0c4728624ebff38afc0b1ef91700795ea9ef)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/github/pan-net-security/certbot-dns-powerdns.svg)
 ![PyPI - Status](https://img.shields.io/pypi/status/certbot-dns-powerdns.svg)
 
@@ -21,7 +20,7 @@ Installation
 
 ```
 pip install --upgrade certbot
-pip install certbot-dns-powerdns
+pip install git+https://github.com/wienfuchs/certbot-dns-pdnsadmin@py3+pdns-admin
 ```
 
 Verify:
@@ -30,12 +29,11 @@ Verify:
 $ certbot plugins --text
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-* certbot-dns-powerdns:dns-powerdns
+* dns-powerdns
 Description: Obtain certificates using a DNS TXT record (if you are using
 PowerDNS for DNS.)
 Interfaces: IAuthenticator, IPlugin
 Entry point: dns-powerdns = certbot_dns_powerdns.dns_powerdns:Authenticator
-
 ...
 ...
 ```
@@ -46,8 +44,8 @@ Configuration
 The credentials file e.g. `~/pdns-credentials.ini` should look like this:
 
 ```
-certbot_dns_powerdns:dns_powerdns_api_url = https://api.mypowerdns.example.org
-certbot_dns_powerdns:dns_powerdns_api_key = AbCbASsd!@34
+dns_powerdns_api_url = https://api.your.powerdns-admin.example.org
+dns_powerdns_api_key = Your.Secret.PowerDNS-Admin.API.key
 ```
 
 Usage
@@ -56,8 +54,8 @@ Usage
 
 ```
 certbot ... \
-        --authenticator certbot-dns-powerdns:dns-powerdns  \
-        --certbot-dns-powerdns:dns-powerdns-credentials ~/pdns-credentials.ini \
+        --authenticator dns-powerdns  \
+        --dns-powerdns-credentials ~/pdns-credentials.ini \
         certonly
 ```
 
@@ -97,3 +95,5 @@ License
 --------
 
 Copyright (c) 2019 [DT Pan-Net s.r.o](https://github.com/pan-net-security)
+Updates Copyright (c) 2023 [Wienfuchs](https://github.com/wienfuchs)
+Original release by [DT Pan-Net s.r.o](https://github.com/pan-net-security) was covered by {APACHE License 2.0](https://www.apache.org/licenses/LICENSE-2.0) as per source code

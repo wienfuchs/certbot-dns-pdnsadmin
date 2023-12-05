@@ -3,7 +3,7 @@ from os import path
 from setuptools import setup
 from setuptools import find_packages
 
-version = "0.2.1"
+version = "0.2.2"
 
 with open('README.md') as f:
     long_description = f.read()
@@ -11,7 +11,7 @@ with open('README.md') as f:
 install_requires = [
     'acme>=0.31.0',
     'certbot>=0.31.0',
-    'dns-lexicon>=3.2.4,<=3.5.6',
+    'dns-lexicon',
     'dnspython',
     'mock',
     'setuptools',
@@ -28,9 +28,9 @@ setup(
     description="PowerDNS DNS Authenticator plugin for Certbot",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/pan-net-security/certbot-dns-powerdns',
-    author="DT Pan-Net s.r.o",
-    author_email='pannet.security@pan-net.eu',
+    url='https://github.com/wienfuchs/certbot-dns-pdnsadmin',
+    author="DT Pan-Net s.r.o (pannet.security@pan-net.eu), updated by Wienfuchs",
+    author_email='wienfuchs@entw.eu',
     license='Apache License 2.0',
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
     classifiers=[
@@ -46,6 +46,8 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.10',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Security',
         'Topic :: System :: Installation/Setup',
